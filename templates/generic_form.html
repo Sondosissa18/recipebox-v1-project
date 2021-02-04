@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br /><br />
+<div class="form-group">
+
+<form method="post" action="" novalidate>
+  {% csrf_token %} {{ form|crispy }}
+  <input type="submit" class="btn btn-success" value="Submit" />
+</div>
+</form>
+<div>
+</div>
+
+{% endblock %}
+
